@@ -2,12 +2,16 @@ GEM
   remote: https://rubygems.org/
   specs:
     minitest (5.14.0)
+    rspec-core (3.10.1)
+      rspec-support (~> 3.10.0)
+    rspec-support (3.10.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   minitest (~> 5.4)
+  rspec-core
 
 BUNDLED WITH
    2.1.4
