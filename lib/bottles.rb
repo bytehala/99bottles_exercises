@@ -20,8 +20,6 @@ class BottleNumber
   attr_accessor :number
 
   def self.for(number)
-    return number if number.is_a? BottleNumber
-
     case number
     when 0
       BottleNumber0
@@ -59,11 +57,7 @@ class BottleNumber
   end
 
   def successor()
-    if number == 0
-      BottleNumber.for(99)
-    else
-      BottleNumber.for(number - 1)
-    end
+    BottleNumber.for(number - 1)
   end
 end
 
@@ -74,6 +68,10 @@ class BottleNumber0 < BottleNumber
 
   def action()
     "Go to the store and buy some more"
+  end
+
+  def successor()
+    BottleNumber.for(99)
   end
 end
 
